@@ -1,15 +1,23 @@
+// imports
 import React, { Component } from 'react';
+import DisplayName from './DisplayName/DisplayName';
+
+// style sheet(s)
 import './App.css'
+
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.player = {
+            firstName: 'Reggie',
+            lastName: 'White'
+        };
     }
 
     render() {
         return (
-            <h1>Hello App User!</h1>
+            <DisplayName footballplayer={this.player} />
         )
     }
 }
