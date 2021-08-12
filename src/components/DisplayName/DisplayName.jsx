@@ -4,9 +4,7 @@ import Player from '../Player/Player';
 
 const DisplayName = (props) => {
     return (
-        <div className="row">
-            <Player footballplayer={props.footballplayer} />
-        </div>
+            <Player footballPlayer={props.footballPlayer} />
     );
 }
 

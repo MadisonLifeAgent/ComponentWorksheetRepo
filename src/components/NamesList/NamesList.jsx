@@ -9,7 +9,6 @@ function NamesList(props) {
             {name}
         </li>
     );
-    console.log(listOfNames[0]);
     return (
         // return the list of names that is formatted as a list
         <ul>{listOfNames}</ul>
