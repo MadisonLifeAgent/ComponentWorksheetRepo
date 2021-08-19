@@ -7,7 +7,7 @@ class SuperHeroCreateForm extends React.Component {
         super(props);
 
         this.state = {
-            superheroId: null,
+            // superheroId: props.length + 1,
             name: '',
             primaryAbility: '',
             secondaryAbility: ''
@@ -19,23 +19,21 @@ class SuperHeroCreateForm extends React.Component {
         this.setState({
             [event.target.name]: event.target.value
         });
-        console.log(event.target.value)
     }
 
     // arrow function to handle submit
-    handleSubmit = (event, props) => {
-        this.setState({
-            [this.state.superheroId]: props.superHeroes.length = 1
-        })
+    handleSubmit = (event) => {
         event.preventDefault();
         // this passes in createsuperhero function from App.jsx (or parent component)
-        this.props.createNewSuperhero(this.state)
+        this.props.createSuperhero(this.state);
     }
+
+
 
     render() {
         return (
             // this form is used to create a new superhero*
-            <form onSubmit={this.props.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <label id="inputmargin" >Superhero Name: </label>
                     <input id="inputmargin" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
                     <br />
